@@ -21,9 +21,9 @@ RDEPEND=">=net-im/skypeforlinux-8.30
 src_install() {
     newbin skype-dbus-mock.py skype-dbus-mock
     insinto /usr/share/dbus-1/system-services
-    doins skype-dbus-mock.service
+    doins org.freedesktop.login1.service
     insinto /usr/share/dbus-1/system.d
-    doins skype-dbus-mock.config
+    doins skype-dbus-mock.conf
 }
 
 pkg_postinst() {
